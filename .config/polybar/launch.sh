@@ -14,6 +14,11 @@ while pgrep -u $USER -x polybar >/dev/null; do sleep 1; done
 # polybar light -c ~/.config/polybar/config.ini &
 # polybar network -c ~/.config/polybar/config.ini &
 # polybar info -c ~/.config/polybar/config.ini &
-
-polybar static-left -c ~/.config/polybar/config.ini &
-polybar static-right -c ~/.config/polybar/config.ini &
+if type "xrandr"; then
+  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+    MONITOR=$m polybar static-left -c ~/.config/polybar/config.ini &
+    MONITOR=$m polybar static-right -c ~/.config/polybar/config.ini &
+  done
+else
+  polybar --reload example &
+fi
