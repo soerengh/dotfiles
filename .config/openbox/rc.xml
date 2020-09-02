@@ -267,7 +267,7 @@
       </action>
     </keybind>
     <!-- Launch URxvt -->
-    <keybind key="W-r">
+    <keybind key="A-space">
       <action name="Execute">
         <command>gmrun</command>
       </action>
@@ -278,6 +278,7 @@
         <command>alacritty</command>
       </action>
     </keybind>
+    <!-- Basic Window Movement -->
     <keybind key="W-Left">
       <action name="If">
         <query target="focus">
@@ -286,18 +287,18 @@
         <then>
           <action name="ToggleMaximize"/>
           <action name="MoveResizeTo">
-            <x>1%</x>
-            <y>15</y>
-            <width client="yes">48%</width>
-            <height>97%</height>
+            <x>5</x>
+            <y>5</y>
+            <width client="yes">49%</width>
+            <height>99%</height>
           </action>
         </then>
         <else>
           <action name="MoveResizeTo">
-            <x>1%</x>
-            <y>15</y>
-            <width client="yes">48%</width>
-            <height>97%</height>
+            <x>5</x>
+            <y>5</y>
+            <width client="yes">49%</width>
+            <height>99%</height>
           </action>
         </else>
       </action>
@@ -310,48 +311,49 @@
         <then>
           <action name="ToggleMaximize"/>
           <action name="MoveResizeTo">
-            <x>51%</x>
-            <y>15</y>
-            <width client="yes">48%</width>
-            <height>97%</height>
+            <x>-5</x>
+            <y>5</y>
+            <width client="yes">49%</width>
+            <height>99%</height>
           </action>
         </then>
         <else>
           <action name="MoveResizeTo">
-            <x>51%</x>
-            <y>15</y>
-            <width client="yes">48%</width>
-            <height>97%</height>
+            <x>-5</x>
+            <y>5</y>
+            <width client="yes">49%</width>
+            <height>99%</height>
           </action>
         </else>
       </action>
     </keybind>
+    <!-- 4 Way Window Distribution -->
     <keybind key="W-A-Up">
       <action name="MoveResizeTo">
-        <y>15</y>
-        <width client="yes">48%</width>
-        <height>47%</height>
+        <y>5</y>
+        <width client="yes">49%</width>
+        <height>49%</height>
       </action>
     </keybind>
     <keybind key="W-A-Down">
       <action name="MoveResizeTo">
-        <y>51%</y>
-        <width client="yes">48%</width>
-        <height>47%</height>
+        <y>-5</y>
+        <width client="yes">49%</width>
+        <height>49%</height>
       </action>
     </keybind>
     <keybind key="W-A-Left">
       <action name="MoveResizeTo">
-        <x>1%</x>
-        <width client="yes">48%</width>
-        <height>47%</height>
+        <x>5</x>
+        <width client="yes">49%</width>
+        <height>49%</height>
       </action>
     </keybind>
     <keybind key="W-A-Right">
       <action name="MoveResizeTo">
-        <x>51%</x>
-        <width client="yes">48%</width>
-        <height>47%</height>
+        <x>-5</x>
+        <width client="yes">49%</width>
+        <height>49%</height>
       </action>
     </keybind>
     <keybind key="W-Up">
